@@ -4,13 +4,14 @@ References:
 For building code: https://platform.openai.com/docs/guides/chat
 """
 
-import os
 from dotenv import load_dotenv
+
 load_dotenv()
 from openai import OpenAI, OpenAIError
 
 # Initialize the OpenAI client (uses OPENAI_API_KEY from environment)
 client = OpenAI()
+
 
 def submit_question(text: str) -> str:
     """Submit a question to the OpenAI API, trying GPT-4 first, then falling back to GPT-3.5-turbo."""
@@ -35,9 +36,12 @@ def submit_question(text: str) -> str:
             raise e
     raise RuntimeError("No suitable model found or accessible.")
 
+
 def create_code(text: str, language: str) -> str:
     """Create code in the specified language, with fallback between GPT-4 and GPT-3.5-turbo."""
-    system_msg = f"You are a helpful assistant that writes clean, efficient {language} code."
+    system_msg = (
+        f"You are a helpful assistant that writes clean, efficient {language} code."
+    )
     user_msg = f"Please write {language} code for the following task:\n{text}"
 
     models_to_try = ["gpt-4", "gpt-3.5-turbo"]

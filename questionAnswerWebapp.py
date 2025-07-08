@@ -21,7 +21,7 @@ def submit_question(question):
     # Setting the OpenAI API key got from the OpenAI dashboard
     openai.api_key = api_key
 
-    result = openai.Completion.create(
+    result = openai.ChatCompletion.create(  # pylint: disable=no-member
         prompt=question,
         temperature=0,
         max_tokens=300,
