@@ -1,4 +1,6 @@
 [![Codespaces Prebuilds](https://github.com/nogibjj/assimilate-openai/actions/workflows/codespaces/create_codespaces_prebuilds/badge.svg)](https://github.com/nogibjj/assimilate-openai/actions/workflows/codespaces/create_codespaces_prebuilds)
+
+
 Update of fork status, jcmeunier77code (july 8, 2025)
 [![Python application test with Github Actions using devcontainers](https://github.com/jcmeunier77code/assimilate-openai/actions/workflows/main.yml/badge.svg)](https://github.com/jcmeunier77code/assimilate-openai/actions/workflows/main.yml)
 
